@@ -12,4 +12,7 @@ Web app built in Flask, and data scraping is done with beautifulsoup4. Azure Tex
 What it does?
 Given a stock ticker (i.e. EOG) it searches NASDAQ.com and seekingalpha.com for related articles and scrapes off all the data. You can do sentiment analysis, earning call transcript analysis and even get the latest stock information.
 
+Sentiment analysis:
+It also presents the most frequent words analyzed from the news articles towards right of the screen. Alos links to the articles are provided.
+
 
