@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Sentiment Analysis {{ ticker }}</title>
+    <link rel="stylesheet" type="text/css" href="../static/css/stylestablecopy.css">
+     <meta name="viewport" content="width=device-width, initial-scale=1">
+<script type="text/javascript" src="//code.jquery.com/jquery-2.1.3.min.js"> </script>
+<style>
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 0px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;
+}
+
+</style>
+</head>
+<body >
+
+     <div class="table-title">
+    <h3><font color="black">Stock for ticker {{ tick }} </font></h3>
+</div>
+     <table class="table-fill">
+<thead>
+<tr>
+<th class="text-left">Last known price</th>
+<th class="text-left">{{ lastprice }}</th>
+</tr>
+</thead>
+<tbody class="table-hover">
+{% for key, value in res.items() %}
+<tr>
+<td class="text-left"> {{ key }}</td>
+<td class="text-left"> {{ value }}</td>
+</tr>
+</tbody>
+    {% endfor %}
+</table>
+
+</body>
+</html>

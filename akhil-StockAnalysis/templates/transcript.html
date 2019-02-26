@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/css/stylestablecopy.css">
+</head>
+<style>
+/* Scrollbar styles */
+::-webkit-scrollbar {
+width: 12px;
+height: 0px;
+}
+
+::-webkit-scrollbar-track {
+border: 1px solid yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+background: yellowgreen;
+border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #88ba1c;
+}
+
+overflow-x: hidden;
+overflow-y: scroll;
+
+</style>
+<body scroll = "yes" >
+
+    <div class="table-title">
+        <h3><font color="black">{{ title }}</font> </h3>
+    <a href= {{ url }}>
+        link
+    </a>
+    </div>
+
+	<table class="table-fill">
+		<thead>
+			<tr>
+				<th> {{ head }} </th>
+			</tr>
+		</thead>
+		<tbody class="table-hover">
+        {% for para in transcript %}
+			<tr>
+				<td> {{ para }}</td>
+			</tr>
+		</tbody>
+          {% endfor %}
+	</table>
+
+</body>
+</html>
+
